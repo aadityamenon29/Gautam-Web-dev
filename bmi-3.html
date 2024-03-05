@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>JS Function with Return Statement</title>
+	<script>
+		/*
+		Task1: Body Mass Index or BMI is calculated by kg/m2 where kg is a person's weight in kilograms 
+		and m2 is their height in metres squared. Define the JavaScript function "bmiCalc" in requested syntaxes 
+		which gets weight(kg) and height(m) as its input parameters and return the BMI value
+		*/
+
+		//1.1)Defining the function using named function declaration: 
+
+		function bmiCalc(weight, height) {
+			let ans = 1;
+			ans = (weight) / (height * height);
+			return ans;
+		}
+
+
+		//1.2)Defining the function using function expression and function keyword:
+
+
+		const bmiCalcExp = function (weight, height) {
+			let ans = 1;
+			ans = (weight) / (height * height);
+			return ans;
+		};
+
+		//1.3)Defining the function using function expression and arrow function:
+
+		const bmiCalcArrow = (weight, height) => {
+			let ans = 1;
+			ans = (weight) / (height * height);
+			return ans;
+		};
+
+
+		//Please make sure only one of the above function definitions should be available when you run the file and the other definitions should be commented out
+
+	</script>
+
+</head>
+
+<body>
+	<div>
+		<h3>Writing the result of calling the BMI function into the span element by using "document.write":</h3>
+		<p>The BMI for a person with weight 75 kg and height 1.78 m is: <span style="color:red">
+				<script>
+					document.write(bmiCalcArrow(75, 1.78));
+				</script>
+			</span>
+		</p>
+	</div>
+
+	<hr>
+
+	<div>
+		<h3>Writing the result of calling the BMI function into the span element by using its "innerHTML" property:</h3>
+		<p>The BMI for a person with weight 75 kg and height 1.78 m is:
+
+
+			<span id="bmiResult" style="color:red">
+
+			</span>
+		</p>
+	</div>
+
+	<script>
+		/* Task 2: Write the required script to update the content of the span element with id "bmiResult" to
+		the BMI function returned value by using getElementById method and the span's innerHTML propety. */
+
+		document.getElementById('bmiResult').innerHTML = bmiCalcArrow(75, 1.78);
+		document.getElementById('bmiResult').style.color = "green";
+
+	</script>
+
+</body>
+
+</html>

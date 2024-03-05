@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>JS Function</title>
+</head>
+
+<body>
+	<h3>Using JavaScript Function</h3>
+	<p>Click the button below which enables you to eneter a number and see the factorial of it:</p>
+	<button type="button" onclick="factorialCalc()">Factorial Calculator</button>
+
+
+	<script>
+		function factorialCalc() {
+			let num = Number(prompt("Enter your number:")); // 7
+
+			let result = 1;
+			// Task: Calculate factorial of num and store it in "result" variable
+			// 5!  = 5 * 4 * 3 * 2 * 1
+			// 7! = 7, 6, 5, 4, 3, 2, 1 --> result = result * <num>
+			for (i = num; i >= 1; i = i - 1) {
+
+				result = result * i;
+
+			}
+
+			// end of Task
+			alert(result);
+		}
+
+
+
+
+	</script>
+</body>
+
+</html>
